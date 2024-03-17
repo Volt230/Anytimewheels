@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script>
+        function submitForm() {
+            // Your form submission logic goes here
+            // Display an alert after the form is submitted
+            alert("Form submitted successfully!");
+            window.location.href = "../car-rental/faq/aboutus.php";
+        }
+    </script>
+    <style>
+        .btn1 {
+        text-align: center;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(7, 0, 0, 0.5)), url('../car-rental/assets/img/background.jpg') center/cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 90vh;
+        }
+        .form1{
+            font-family: "Lucida Console", "Courier New", cursive;
+            color: white;
+            display: flex;
+            height: 90vh;
+            flex-direction: column;
+            align-items: flex-start; /* Center items horizontally within the form */
+            margin: auto; /* Add auto margin to horizontally center .form1 within body */
+            max-width: 300px;
+            margin-top: 150px;
+        }
+        .btn {
+        text-align: center;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: auto;
+        }
+        hr.line {
+            border: 1px solid rgb(255, 255, 255);
+            width: 250px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: white;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <a href="../car-rental/faq/aboutus.php ">
+        <button class="btn1">Back</button>
+    </a>
+    <form class="form1" onsubmit="submitForm();">
+        <h1>Anytime Wheels</h1>
+        <hr class="line">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Query:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        
+            <button type="submit" class="btn">Submit</button>
+    </form>
+</body>
+</html>
