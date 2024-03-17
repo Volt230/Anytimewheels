@@ -308,6 +308,26 @@ h3 {
   margin-right: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.map-container {
+  background-image: url('/assets/img/background.jpg'); /* Replace 'path/to/your/image.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+
+#googleMap {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+>>>>>>> a6d0474 (feature signup working)
 .site-footer {
   padding: 20px 0;
   text-align: center;
@@ -413,6 +433,10 @@ h3 {
   z-index: 0;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a6d0474 (feature signup working)
 @media (max-width: 756px) {
   .sub-menu {
     width: 100%;

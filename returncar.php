@@ -209,7 +209,31 @@ function dateDiff($start, $end) {
           
           <form action="display.php" method="post">
         <label for="userInput"><h5>Arrivat At: </h5></label>
+<<<<<<< HEAD
         <input type="text" id="userInput" name="userInput" required>
+=======
+<select name="userInput" id="userInput">
+    <option value="" selected disabled hidden>Select your city</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Pune">Pune</option>
+    <option value="Goa">Goa</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Patna">Patna</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Thane">Thane</option>
+    <option value="Indore">Indore</option>
+    <option value="Bhopal">Bhopal</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Dehradun">Dehradun</option>
+    <option value="Chennai">Chennai</option>
+</select>
+<br><br>
+
+>>>>>>> a6d0474 (feature signup working)
         <button type="button" id="rzp-button" class="btn btn-success pull-right">Submit</button>
     </form>
 

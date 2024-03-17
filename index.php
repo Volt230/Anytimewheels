@@ -183,7 +183,15 @@ $conn = Connect();
     </div>
     <br><br>
     
+<<<<<<< HEAD
     <!-- <div id="googleMap" style="width: 100%; height: 400px;"></div> -->
+=======
+    <div class="container map-container">
+    <h2 class="font-weight: bold">Discover Our Service Locations:</h2>
+    <div id="googleMap" style="width: 100%; height: 500px; margin-bottom: 20px;"></div>
+</div>
+
+>>>>>>> a6d0474 (feature signup working)
     
     <div class="bgimg-2">
         <div class="caption">
@@ -222,6 +230,7 @@ $conn = Connect();
             </div>
         </div>
     </footer>
+<<<<<<< HEAD
     <script>
         function myMap() {
     // Define the center of the map
@@ -246,6 +255,55 @@ $conn = Connect();
     });
 }
 
+=======
+    <script type="text/javascript">
+        function myMap() {
+            // Define the center of the map
+            var myCenter = new google.maps.LatLng(20.5937, 78.9629); // India's center coordinates
+
+            // Specify map options
+            var mapOptions = {
+                center: myCenter,
+                zoom: 5,
+                scrollwheel: true,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            // Create the map object
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            // Define array of locations with their coordinates and names
+            var locations = [
+    { lat: 19.0760, lng: 72.8777, name: 'Mumbai' },
+    { lat: 12.9716, lng: 77.5946, name: 'Bangalore' },
+    { lat: 18.5204, lng: 73.8567, name: 'Pune' },
+    { lat: 15.2993, lng: 74.1240, name: 'Goa' },
+    { lat: 28.7041, lng: 77.1025, name: 'Delhi' },
+    { lat: 22.5726, lng: 88.3639, name: 'Kolkata' },
+    { lat: 25.5941, lng: 85.1376, name: 'Patna' },
+    { lat: 26.9124, lng: 75.7873, name: 'Jaipur' },
+    { lat: 30.7333, lng: 76.7794, name: 'Chandigarh' },
+    { lat: 17.3850, lng: 78.4867, name: 'Hyderabad' },
+    { lat: 19.0760, lng: 72.8777, name: 'Thane' },
+    { lat: 22.7196, lng: 75.8577, name: 'Indore' },
+    { lat: 23.2599, lng: 77.4126, name: 'Bhopal' },
+    { lat: 23.0225, lng: 72.5714, name: 'Ahmedabad' },
+    { lat: 30.3165, lng: 78.0322, name: 'Dehradun' },
+    { lat: 13.0827, lng: 80.2707, name: 'Chennai' }, 
+    // Add more locations as needed
+];
+
+            // Add markers for each location
+            locations.forEach(function (location) {
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(location.lat, location.lng),
+                    map: map,
+                    title: location.name
+                });
+            });
+        }
+>>>>>>> a6d0474 (feature signup working)
     </script>
     <script>
         function sendGaEvent(category, action, label) {

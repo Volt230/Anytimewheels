@@ -193,9 +193,34 @@ if(!isset($_SESSION['login_customer'])){
             <input onclick="reveal()" type="radio" name="radio1" value="km"><b> per KM</b> &nbsp;
             <input onclick="reveal()" type="radio" name="radio1" value="days"><b> per day</b>
             <br><br>
+<<<<<<< HEAD
             Enter Your city :
             <input type="text" placeholder="Enter your city" name="city">        
             <br><br>
+=======
+Enter Your city:
+<select name="city" id="citySelect">
+    <option value="" selected disabled hidden>Select your city</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Pune">Pune</option>
+    <option value="Goa">Goa</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Patna">Patna</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Thane">Thane</option>
+    <option value="Indore">Indore</option>
+    <option value="Bhopal">Bhopal</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Dehradun">Dehradun</option>
+    <option value="Chennai">Chennai</option>
+</select>
+<br><br>
+
+>>>>>>> a6d0474 (feature signup working)
                 <!-- <form class="form-group"> -->
                  <label>Select a driver:</label>
                     <select name="driver_id_from_dropdown" ng-model="myVar1" onchange="selectDriver()">
