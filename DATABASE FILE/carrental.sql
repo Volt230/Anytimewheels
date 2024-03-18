@@ -336,11 +336,6 @@ ALTER TABLE `rentedcars`
   ADD CONSTRAINT `rentedcars_ibfk_1` FOREIGN KEY (`customer_username`) REFERENCES `customers` (`customer_username`),
   ADD CONSTRAINT `rentedcars_ibfk_2` FOREIGN KEY (`car_id`) REFERENCES `cars` (`car_id`),
   ADD CONSTRAINT `rentedcars_ibfk_3` FOREIGN KEY (`driver_id`) REFERENCES `driver` (`driver_id`);
-<<<<<<< HEAD
-=======
-  ADD `city` VARCHAR(20) NOT NULL AFTER `city`;
-
->>>>>>> a6d0474 (feature signup working)
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
