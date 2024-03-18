@@ -308,8 +308,7 @@ h3 {
   margin-right: 10px;
 }
 
-<<<<<<< HEAD
-=======
+
 .map-container {
   background-image: url('/assets/img/background.jpg'); /* Replace 'path/to/your/image.jpg' with your actual image path */
   background-size: cover;
@@ -327,7 +326,7 @@ h3 {
 }
 
 
->>>>>>> a6d0474 (feature signup working)
+
 .site-footer {
   padding: 20px 0;
   text-align: center;
@@ -433,10 +432,6 @@ h3 {
   z-index: 0;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a6d0474 (feature signup working)
 @media (max-width: 756px) {
   .sub-menu {
     width: 100%;
