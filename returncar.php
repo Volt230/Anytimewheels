@@ -209,9 +209,6 @@ function dateDiff($start, $end) {
           
           <form action="display.php" method="post">
         <label for="userInput"><h5>Arrivat At: </h5></label>
-<<<<<<< HEAD
-        <input type="text" id="userInput" name="userInput" required>
-=======
 <select name="userInput" id="userInput">
     <option value="" selected disabled hidden>Select your city</option>
     <option value="Mumbai">Mumbai</option>
@@ -233,7 +230,6 @@ function dateDiff($start, $end) {
 </select>
 <br><br>
 
->>>>>>> a6d0474 (feature signup working)
         <button type="button" id="rzp-button" class="btn btn-success pull-right">Submit</button>
     </form>
 

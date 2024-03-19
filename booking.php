@@ -168,8 +168,8 @@ if(!isset($_SESSION['login_customer'])){
         <!-- </div>      -->
         
         <h5> Choose your car type:  &nbsp;
-            <input onclick="reveal()" type="radio" name="radio" value="ac" ng-model="myVar"> <b>With AC </b>&nbsp;
-            <input onclick="reveal()" type="radio" name="radio" value="non_ac" ng-model="myVar"><b>With-Out AC </b>
+            <input onclick="reveal()" type="radio" name="radio" required value="ac" ng-model="myVar"> <b>With AC </b>&nbsp;
+            <input onclick="reveal()" type="radio" name="radio" required value="non_ac" ng-model="myVar"><b>With-Out AC </b>
                 
         
         <div ng-switch="myVar"> 
@@ -190,16 +190,11 @@ if(!isset($_SESSION['login_customer'])){
                      </div>
         </div>        
          <h5> Charge type:  &nbsp;
-            <input onclick="reveal()" type="radio" name="radio1" value="km"><b> per KM</b> &nbsp;
-            <input onclick="reveal()" type="radio" name="radio1" value="days"><b> per day</b>
+            <input onclick="reveal()" type="radio" name="radio1" required value="km"><b> per KM</b> &nbsp;
+            <input onclick="reveal()" type="radio" name="radio1" required value="days"><b> per day</b>
             <br><br>
-<<<<<<< HEAD
-            Enter Your city :
-            <input type="text" placeholder="Enter your city" name="city">        
-            <br><br>
-=======
 Enter Your city:
-<select name="city" id="citySelect">
+<select name="city" id="citySelect" required>
     <option value="" selected disabled hidden>Select your city</option>
     <option value="Mumbai">Mumbai</option>
     <option value="Bangalore">Bangalore</option>
@@ -220,10 +215,9 @@ Enter Your city:
 </select>
 <br><br>
 
->>>>>>> a6d0474 (feature signup working)
                 <!-- <form class="form-group"> -->
                  <label>Select a driver:</label>
-                    <select name="driver_id_from_dropdown" ng-model="myVar1" onchange="selectDriver()">
+                    <select name="driver_id_from_dropdown" ng-model="myVar1" required onchange="selectDriver()">
                         <option value="None">None</option>
                         <?php
                         $sql2 = "SELECT * FROM driver d WHERE d.driver_availability = 'yes' AND d.client_username IN (SELECT cc.client_username FROM clientcars cc WHERE cc.car_id = '$car_id')";
@@ -268,7 +262,8 @@ if(mysqli_num_rows($result2) > 0){
 <?php }} ?>
                 <input type="hidden" name="hidden_carid" value="<?php echo $car_id; ?>">
                 
-         
+                <input type="checkbox" id="termsCheckbox" name="termsCheckbox" required>
+                <label for="termsCheckbox">I accept the <a href="terms.php" target="_blank">terms and conditions</a></label>
            <input type="Submit" value="Rent Now" class="btn btn-warning pull-right">     
            </div>
         </form>

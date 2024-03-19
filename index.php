@@ -183,15 +183,11 @@ $conn = Connect();
     </div>
     <br><br>
     
-<<<<<<< HEAD
-    <!-- <div id="googleMap" style="width: 100%; height: 400px;"></div> -->
-=======
     <div class="container map-container">
     <h2 class="font-weight: bold">Discover Our Service Locations:</h2>
     <div id="googleMap" style="width: 100%; height: 500px; margin-bottom: 20px;"></div>
 </div>
 
->>>>>>> a6d0474 (feature signup working)
     
     <div class="bgimg-2">
         <div class="caption">
@@ -230,32 +226,6 @@ $conn = Connect();
             </div>
         </div>
     </footer>
-<<<<<<< HEAD
-    <script>
-        function myMap() {
-    // Define the center of the map
-    var myCenter = new google.maps.LatLng(25.614744, 85.128489);
-    
-    // Specify map options
-    var mapOptions = {
-        center: myCenter,
-        zoom: 12,
-        scrollwheel: true,
-        draggable: true,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    
-    // Create the map object
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
-    
-    // Add a marker to the map
-    var marker = new google.maps.Marker({
-        position: myCenter,
-        map: map
-    });
-}
-
-=======
     <script type="text/javascript">
         function myMap() {
             // Define the center of the map
@@ -303,7 +273,6 @@ $conn = Connect();
                 });
             });
         }
->>>>>>> a6d0474 (feature signup working)
     </script>
     <script>
         function sendGaEvent(category, action, label) {
