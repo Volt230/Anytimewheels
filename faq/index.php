@@ -275,6 +275,9 @@ $conn = Connect();
     <script src="assets/js/jquery.easing.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="assets/js/theme.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/main.js"></script>
 </body></body>
 
 </html>
