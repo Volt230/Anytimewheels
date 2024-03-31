@@ -157,9 +157,9 @@ $total_fine = $extra_days*200;
 
 $duration = dateDiff("$rent_start_date","$rent_end_date");
 
-if($extra_days>0) {
-    $total_amount = $total_amount + $total_fine;  
-}
+// if($extra_days>0) {
+//     $total_amount = $total_amount + $total_fine;  
+// }
 
 if($charge_type == "days"){
     $no_of_days = $distance_or_days;

@@ -122,12 +122,6 @@ $conn = Connect();
         <!-- /.container -->
     </nav>
 <?php
-function dateDiff($start, $end) {
-    $start_ts = strtotime($start);
-    $end_ts = strtotime($end);
-    $diff = $end_ts - $start_ts;
-    return round($diff / 86400);
-}
  $id = $_GET["id"];
  $sql="SELECT rc.driver_id FROM rentedcars rc WHERE id = '$id'";
  $result = $conn->query($sql);
@@ -163,7 +157,19 @@ function dateDiff($start, $end) {
         }
     }
 }
+$car_return_date = date('Y-m-d');
+function dateDiff($start, $end) {
+    $start_ts = strtotime($start);
+    $end_ts = strtotime($end);
+    $diff = $end_ts - $start_ts;
+    return round($diff / 86400);
+}
+
+$extra_days = dateDiff("$rent_end_date", "$car_return_date");
+$total_fine = $extra_days*200;
+
 ?>
+
     <div class="container" style="margin-top: 65px;" >
     <div class="col-md-7" style="float: none; margin: 0 auto;">
       <div class="form-area">
@@ -244,8 +250,13 @@ function dateDiff($start, $end) {
 <script>
     var total_charge;
     var fare = <?php echo $fare; ?>;
+    var extra_days = <?php echo $extra_days; ?>;
+    var total_fine = <?php echo $total_fine*100; ?> ;
     document.getElementById('rzp-button').onclick = function () {
         var no_of_days = <?php echo $no_of_days; ?>;
+        if(extra_days>0) {
+                no_of_days = no_of_days + extra_days;  
+            }
         var charge;
         var driver_charge=0;
         if("<?php echo $driver_id ?>" != 0){
@@ -260,6 +271,9 @@ function dateDiff($start, $end) {
         console.log(charge);
         }
         total_charge = Math.round(charge * 100);
+        if(extra_days>0) {
+            total_charge = total_charge + total_fine;  
+        }
         console.log(total_charge);
         document.getElementById('total_fare').value = total_charge;
         var options = {
